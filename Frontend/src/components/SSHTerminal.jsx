@@ -131,7 +131,7 @@ const SSHTerminal = () => {
 
     setConnecting(true);
     try {
-      const response = await fetch('http://localhost:3001/api/ssh/connect', {
+      const response = await fetch('https://api.nevernever.me/api/ssh/connect', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ const SSHTerminal = () => {
     if (!sessionId) return;
 
     try {
-      await fetch('/api/ssh/disconnect', {
+      await fetch('https://api.nevernever.me/api/ssh/disconnect', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
